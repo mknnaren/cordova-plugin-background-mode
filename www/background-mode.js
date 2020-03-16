@@ -292,6 +292,19 @@ exports.unlock = function()
 };
 
 /**
+ * Set permission to run on top > API 29.
+ *
+ * @return [ Void ]
+ */
+exports.permission = function()
+{
+    if (this._isAndroid)
+    {
+        cordova.exec(null, null, 'BackgroundModeExt', 'permission', []);
+    }
+};
+
+/**
  * If the mode is enabled or disabled.
  *
  * @return [ Boolean ]

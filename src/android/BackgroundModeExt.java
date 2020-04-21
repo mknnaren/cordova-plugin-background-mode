@@ -116,8 +116,8 @@ public class BackgroundModeExt extends CordovaPlugin {
                 wakeup();
                 unlock();
                 break;
-            case "permission":
-                requestPermission();
+            case "permissionOnTop":
+                requestPermissionOnTop();
                 break;
             default:
                 validAction = false;
@@ -335,7 +335,7 @@ public class BackgroundModeExt extends CordovaPlugin {
         getApp().startActivity(getLaunchIntent());
     }
 
-    private void requestPermission() {
+    private void requestPermissionOnTop() {
         if (SDK_INT < 29) {
             return;
         }

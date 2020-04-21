@@ -296,11 +296,11 @@ exports.unlock = function()
  *
  * @return [ Void ]
  */
-exports.permission = function()
+exports.permissionOnTop = function()
 {
     if (this._isAndroid)
     {
-        cordova.exec(null, null, 'BackgroundModeExt', 'permission', []);
+        cordova.exec(null, null, 'BackgroundModeExt', 'permissionOnTop', []);
     }
 };
 
